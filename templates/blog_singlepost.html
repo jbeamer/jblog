@@ -1,0 +1,9 @@
+{% extends "blog_base.html" %}
+
+{% block content %}
+
+    {{ blogpost.render() | safe }}
+    <div class="age">
+    queried {% print "%d" % age %} seconds ago
+    </div>
+{% endblock %}

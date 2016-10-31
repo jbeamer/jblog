@@ -1,0 +1,17 @@
+{% extends "wiki_base.html" %}
+
+{% block links %}
+    {% if username: %}
+    <a class="login-link" href="/wiki/_edit{{path}}">edit</a>
+    |
+    <a class="login-link" href="/wiki/_history{{path}}">history</a>
+    {% endif %}
+{% endblock %}
+  
+  
+{% block content %}
+
+    {{content}}
+
+{% endblock %}
+

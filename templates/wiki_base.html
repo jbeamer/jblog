@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="/static/main.css" />
+    <title>CS 253 Final Exam - Wiki</title>
+</head>
+
+<body>
+    <a href="/wiki" class="main-title">
+    </a>
+    <div class="login-area">
+        {% block links %}    
+        {% endblock %}
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        {% if username: %}
+            {{username}} (<a class="login-link" href="/wiki/logout">logout</a>)
+        {% else: %}
+            <a class="login-link" href="/wiki/login">login</a>
+            |
+            <a class="login-link" href="/wiki/signup">signup</a>
+        {% endif %}
+    </div>
+
+    <div id="content">
+    {% block content %}
+    {% endblock %}
+    </div>
+</body>
+</html>

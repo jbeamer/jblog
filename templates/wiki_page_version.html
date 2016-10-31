@@ -1,0 +1,12 @@
+<tr>
+    <td>
+        {{ wikipage.created.strftime("%a %b %d %X %Y") }}
+    </td>
+    <td>
+        {{ wikipage.content[:100] }}
+    </td>
+    <td>
+        <a href="/wiki{{wikipage.path}}?v={{wikipage.key().id()}}">view</a>
+        <a href="/wiki/_edit{{wikipage.path}}">edit</a>
+    </td>
+</tr>

@@ -1,0 +1,15 @@
+{% extends "wiki_base.html" %}
+
+{% block links %}
+    <a class="login-link" href="/wiki{{path}}">view</a>
+    |
+    <a class="login-link" href="/wiki/_history{{path}}">history</a>
+{% endblock %}
+  
+{% block content %}
+    <form method="post">
+        <textarea name="content">{{content}}</textarea>
+        <div class="error">{{error}}</div>
+    <input type="submit" value="Save"/>
+    </form>
+{% endblock %}

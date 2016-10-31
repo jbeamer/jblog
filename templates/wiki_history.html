@@ -1,0 +1,15 @@
+{% extends "wiki_base.html" %}
+
+{% block links %}
+    <a class="login-link" href="/wiki/_edit{{path}}">edit</a>
+    |
+    <a class="login-link" href="/wiki{{path}}">view</a>
+{% endblock %}
+  
+{% block content %}
+<table>
+    {% for wikipage in wikipages %}
+        {{ wikipage.renderversion() }}
+    {% endfor %}
+</table>
+{% endblock %}
